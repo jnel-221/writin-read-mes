@@ -10,6 +10,7 @@ A brief description of your application goes here
 
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [Credits](#Credits)
 - [Contributing](#Contributing)
 - [Test](#Tests)
 - [License](License)
@@ -19,7 +20,11 @@ A brief description of your application goes here
 
 ## Usage
 
+## Credits
+
 ## Contributing
+
+Please review our community standards for contributing, adopted from the [Contributor Covenant](https://www.contributor-covenant.org/).
 
 ## Tests
 
@@ -27,4 +32,4 @@ A brief description of your application goes here
 
 ## Questions
 
-Questions? Please contact me at (email address). Feel free to check out additional projects at (github profile)
+Questions? Please contact by [email](${object.email}). Feel free to check out additional projects at [gitHub profile name](https://github.com/${object.gitHub})
