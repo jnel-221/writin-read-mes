@@ -39,7 +39,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let noLink = ` `;
-  let link = `- [License](License)`;
+  let link = `- [License](#License)`;
   return license === "none" ? noLink : link;
 }
 
@@ -53,7 +53,9 @@ function renderLicenseSection(license) {
 
 function renderLicenseContents(license) {
   let noLicenseContent = ` `;
-  let licenseContent = `This project is licensed under the terms of the ${license} license.`;
+  let licenseContent = `This project is licensed under the terms of the ${license} license.
+  
+  [Back to Table of Contents](#table-of-contents)`;
   return license === "none" ? noLicenseContent : licenseContent;
 }
 
@@ -76,28 +78,38 @@ function generateMarkdown(data) {
   - [Credits](#Credits)
   - [Contributing](#Contributing)
   - [Test](#Tests)
-  - [Questions](Questions)
+  - [Questions](#Questions)
   ${renderLicenseLink(data.license)}
   
   ## Installation
 
   ${data.install}
+
+  [Back to Table of Contents](#table-of-contents)
   
   ## Usage
 
   ${data.usage}
+
+  [Back to Table of Contents](#table-of-contents)
   
   ## Credits
 
   ${data.credits}
+
+  [Back to Table of Contents](#table-of-contents)
   
   ## Contributing
   
   Please review the community standards for contributing to this project, adopted from the [Contributor Covenant](https://www.contributor-covenant.org/).
+
+  [Back to Table of Contents](#table-of-contents)
   
   ## Tests
 
   ${data.tests}
+
+  [Back to Table of Contents](#table-of-contents)
   
   ## Questions
   
@@ -106,6 +118,8 @@ function generateMarkdown(data) {
   }). Feel free to check out additional projects at [my GitHub profile](https://github.com/${
     data.gitHub
   })
+
+  [Back to Table of Contents](#table-of-contents)
   
   ${renderLicenseSection(data.license)}
 
