@@ -1,40 +1,65 @@
+function renderBadgeSection(license) {
+  let noBadgeSection = ` ---------------------------- `;
+  let badgeSection = `## Badge`;
+  return license === "none" ? noBadgeSection : badgeSection;
+}
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  console.log(license);
+  let noBadge = ` `;
+
   if (license === "none") {
-    console.log("No license badge will be displayed on your repo.");
+    return noBadge;
   } else {
-    console.log("licensed to code!");
+    switch (license) {
+      case "MIT":
+        response = `![Badge](https://img.shields.io/badge/license-MIT-green.svg)`;
+        break;
+      case "GNU GPLv3":
+        response = `![Badge](https://img.shields.io/badge/license-GNU%20GPLv3-lightgrey.svg)`;
+        break;
+      case "The Unlicense":
+        response = `![Badge](https://img.shields.io/badge/license-The%20Unlicense-green.svg)`;
+        break;
+      case "Mozilla Public 2.0":
+        response = `![Badge](https://img.shields.io/badge/license-Mozilla%20Public%202.0-blue.svg)`;
+        break;
+      case "Apache 2.0":
+        response = `![Badge](https://img.shields.io/badge/license-Apache%202.0-blue.svg)`;
+        break;
+      default:
+        response = license;
+    }
+    return response;
   }
-  // const Badge = `![Badge](https://img.shields.io/badge/license-${data.license}--Clause-blue.svg`;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === "none") {
-    console.log("no license for you!");
-  } else {
-    console.log("licensed and loaded");
-  }
+  let noLink = ` `;
+  let link = `- [License](License)`;
+  return license === "none" ? noLink : link;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license === "none") {
-    console.log("no license no problem");
-  } else {
-    console.log("more licenses more problems");
-  }
+  let noLicenseSection = ` `;
+  let licenseSection = `## License`;
+  return license === "none" ? noLicenseSection : licenseSection;
 }
+
+function renderLicenseContents(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   console.log(`# ${data.title}
   
-  ## Badge(s)
+  ${renderBadgeSection(data.license)}
+
+  ${renderLicenseBadge(data.license)}
   
   ## Description
 
@@ -47,8 +72,8 @@ function generateMarkdown(data) {
   - [Credits](#Credits)
   - [Contributing](#Contributing)
   - [Test](#Tests)
-  - [License](License)
   - [Questions](Questions)
+  ${renderLicenseLink(data.license)}
   
   ## Installation
 
@@ -70,25 +95,19 @@ function generateMarkdown(data) {
 
   ${data.tests}
   
-  ## License
-
-  ${data.license}
-  
   ## Questions
   
-  Questions? Please contact by [email](${data.email}. Feel free to check out additional projects at [gitHub profile name](https://github.com/${data.gitHub})
+  Questions? Please contact by [email](${
+    data.email
+  }). Feel free to check out additional projects at [my GitHub profile](https://github.com/${
+    data.gitHub
+  })
   
+  ${renderLicenseSection(data.license)}
+
+  ${data.license}
 
 `);
 }
 
-module.exports = {
-  generateMarkdown,
-  renderLicenseBadge,
-  renderLicenseLink,
-  renderLicenseSection,
-};
-
-//![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-//https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>&color=<COLOR>&prefix=<PREFIX>&suffix=<SUFFIX>
+module.exports = generateMarkdown;
