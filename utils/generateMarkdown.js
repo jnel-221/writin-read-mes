@@ -51,16 +51,21 @@ function renderLicenseSection(license) {
   return license === "none" ? noLicenseSection : licenseSection;
 }
 
-function renderLicenseContents(license) {}
+function renderLicenseContents(license) {
+  let noLicenseContent = ` `;
+  let licenseContent = `This project is licensed under the terms of the ${license} license.`;
+  return license === "none" ? noLicenseContent : licenseContent;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  console.log(`# ${data.title}
-  
+  console.log(
+    `# ${data.title}
+
   ${renderBadgeSection(data.license)}
 
   ${renderLicenseBadge(data.license)}
-  
+
   ## Description
 
   ${data.description}
@@ -100,14 +105,15 @@ function generateMarkdown(data) {
   Questions? Please contact by [email](${
     data.email
   }). Feel free to check out additional projects at [my GitHub profile](https://github.com/${
-    data.gitHub
-  })
+      data.gitHub
+    })
   
   ${renderLicenseSection(data.license)}
 
-  ${data.license}
+  ${renderLicenseContents(data.license)}
 
-`);
+`
+  );
 }
 
 module.exports = generateMarkdown;
