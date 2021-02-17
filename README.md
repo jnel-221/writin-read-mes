@@ -26,7 +26,8 @@ NPM install
 
 ## Usage
 
-After installing dependencies and running NPM test, initiate the prompts by entering node index.js in the command line. Answer the questions that present in the command line to create your readme content (screenshots below of example app--app does not yet exist).
+After installing dependencies and running NPM test, initiate the prompts by entering node index.js in the command line. Answer the questions that present in the command line to create your readme content. Edit content for typos/content after markdown generated (if needed)
+(Screenshots below of example app---app does not exist).
 
 Initiating app from command line:
 ![Calling application](./assets/images/initiating-app.png)
@@ -34,14 +35,14 @@ Initiating app from command line:
 User is asked to provide content for readme:
 ![inquirer questions](./assets/images/inquirer.png)
 
-After completing questions, readme is generated:
+After questions complete, readme is generated:
 ![sample readme](./assets/images/readme1.png)
 ![sample readme](./assets/images/readme2.png)
 [Back to Table of Contents](#table-of-contents)
 
 ## Credits
 
-This project uses Inquirer and NPM fs to run questions and write the markdown files, Shields.io used to generate license badges, and the application is dynamically powered by javascript.
+This project uses [Inquirer](https://www.npmjs.com/package/inquirer) and [Node fs](https://www.npmjs.com/package/node-fs) to run questions and write the markdown files, [Shields.io](https://shields.io/category/license) used to generate license badges, and the application is dynamically powered by JavaScript.
 
 [Back to Table of Contents](#table-of-contents)
 
