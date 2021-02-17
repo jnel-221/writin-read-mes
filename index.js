@@ -64,11 +64,6 @@ const questions = [
   },
 ];
 
-inquirer.prompt(questions).then((data) => {
-  const fileName = `${data.title}.md`;
-
-  writeToFile(fileName, data);
-});
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, generateMarkdown(data), (err) => {
@@ -77,9 +72,12 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {
-  
+function init(questions) {
+  inquirer.prompt(questions).then((data) => {
+    const fileName = `${data.title}.md`;
+    writeToFile(fileName, data);
+  });
 }
 
 // Function call to initialize app
-init();
+init(questions);
