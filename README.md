@@ -8,6 +8,8 @@
 
 A command-line application for producing high-quality readme markdown files for your projects.
 
+Watch a demo of Writing READMEs [here.](https://drive.google.com/file/d/1SLfq3WS6d2imb3b9Xi4MvP58fgGGbEZg/view)
+
 ## Table of Contents
 
 - [Installation](#Installation)
