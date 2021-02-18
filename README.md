@@ -28,7 +28,7 @@ NPM install
 
 ## Usage
 
-After installing dependencies and running NPM test, initiate the prompts by entering node index.js in the command line. Answer the questions that present in the command line to create your readme content. Edit content for typos/content after markdown generated (if needed)
+After installing dependencies, initiate the prompts by entering 'node index.js' in the command line. Answer the questions that present in the command line to create your readme content. Edit content for typos/content after markdown generated (if needed)
 (Screenshots of fictional app; any resemblance to an existing app is purely coincidental).
 
 Initiating app from command line:
