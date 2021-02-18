@@ -113,7 +113,7 @@ function generateMarkdown(data) {
   
   ## Questions
   
-  Questions? Please send annp [email](${
+  Questions? Please send an [email](${
     data.email
   }). Feel free to check out additional projects at [my GitHub profile](https://github.com/${
     data.gitHub
