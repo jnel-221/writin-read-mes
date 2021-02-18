@@ -62,7 +62,7 @@ No tests at this time.
 
 ## Questions
 
-Questions? Please send an [email](jennifer.nelson242@gmail.com). Feel free to check out additional projects at [my GitHub profile](https://github.com/jnel-221)
+Questions? You can reach me by email at jennifer.nelson242@gmail.com. Feel free to check out additional projects at [my GitHub profile](https://github.com/jnel-221).
 
 [Back to Table of Contents](#table-of-contents)
 

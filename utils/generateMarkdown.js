@@ -113,11 +113,11 @@ function generateMarkdown(data) {
   
   ## Questions
   
-  Questions? Please send an [email](${
+  Questions? You can reach me by email at ${
     data.email
-  }). Feel free to check out additional projects at [my GitHub profile](https://github.com/${
+  }. Feel free to check out additional projects at [my GitHub profile](https://github.com/${
     data.gitHub
-  })
+  }).
 
   [Back to Table of Contents](#table-of-contents)
   
