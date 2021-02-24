@@ -83,7 +83,9 @@ function generateMarkdown(data) {
   
   ## Installation
 
+  \`\`\`bash
   ${data.install}
+  \`\`\`
 
   [Back to Table of Contents](#table-of-contents)
   
@@ -107,7 +109,9 @@ function generateMarkdown(data) {
   
   ## Tests
 
+  \`\`\`bash
   ${data.tests}
+  \`\`\`
 
   [Back to Table of Contents](#table-of-contents)
   
